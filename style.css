@@ -1,53 +1,82 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #111;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('https://wallpaperaccess.com/full/317501.jpg') no-repeat center center/cover;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  padding-top: 50px;
+  min-height: 100vh;
+  backdrop-filter: blur(5px);
 }
 
 .container {
-  width: 400px;
-  background-color: #222;
-  padding: 20px;
-  border-radius: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-.movie-form {
+form, #search {
   display: flex;
+  flex-direction: column;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
-input, select, button {
-  padding: 8px;
+input, textarea, button {
+  padding: 0.8rem;
+  border-radius: 10px;
   border: none;
-  border-radius: 5px;
-}
-
-input, select {
-  flex: 1;
+  font-size: 1rem;
 }
 
 button {
-  background-color: #f39c12;
+  background: #ff4b2b;
   color: white;
   cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+button:hover {
+  background: #ff1e00;
 }
 
-li {
-  background-color: #333;
-  padding: 10px;
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
+}
+
+.movie-card h3 {
+  margin: 0.5rem 0;
+}
+
+.movie-card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
 }

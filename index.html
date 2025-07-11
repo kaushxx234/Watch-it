@@ -2,30 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Movie Tracker</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🎬 Watch it</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>🎬 Movie Tracker</h1>
+    <h1>🎬 Watch it</h1>
+    
+    <form id="movie-form">
+      <input type="text" id="title" placeholder="Enter movie name" required />
+      <input type="text" id="genre" placeholder="Genre (e.g., Action, Drama)" required />
+      <textarea id="notes" placeholder="Why you loved it? (optional)"></textarea>
+      <button type="submit">Add Movie</button>
+    </form>
 
-    <div class="movie-form">
-      <input type="text" id="movieName" placeholder="Enter movie name" />
-      <select id="movieStatus">
-        <option value="watched">Watched</option>
-        <option value="toWatch">Want to Watch</option>
-      </select>
-      <button onclick="addMovie()">Add</button>
-    </div>
+    <input type="text" id="search" placeholder="🔍 Search movie posters" />
 
-    <div class="filter">
-      <button onclick="filterMovies('all')">All</button>
-      <button onclick="filterMovies('watched')">Watched</button>
-      <button onclick="filterMovies('toWatch')">To Watch</button>
-    </div>
-
-    <ul id="movieList"></ul>
+    <div id="movies" class="movie-grid"></div>
   </div>
 
   <script src="script.js"></script>
