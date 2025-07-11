@@ -14,7 +14,18 @@
     
     <form id="movie-form">
       <input type="text" id="title" placeholder="Enter movie name" required />
-      <input type="text" id="genre" placeholder="Genre (e.g., Action, Drama)" required />
+      <select id="genre" required>
+  <option value="">Choose Genre</option>
+  <option value="Action">Action</option>
+  <option value="Drama">Drama</option>
+  <option value="Comedy">Comedy</option>
+  <option value="Romance">Romance</option>
+  <option value="Thriller">Thriller</option>
+  <option value="Horror">Horror</option>
+  <option value="Sci-Fi">Sci-Fi</option>
+  <option value="Documentary">Documentary</option>
+</select>
+
       <textarea id="notes" placeholder="Why you loved it? (optional)"></textarea>
       <button type="submit">Add Movie</button>
     </form>
