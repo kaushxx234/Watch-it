@@ -1,36 +1,42 @@
+<!-- index.html - Watch It: Beautiful Movie Tracker -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🎬 Watch it</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎬 Watch It</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="container">
-    <h1>🎬 Watch it</h1>
-    
+    <h1>🎬 Watch It</h1>
+
     <form id="movie-form">
       <input type="text" id="title" placeholder="Enter movie name" required />
       <select id="genre" required>
-  <option value="">Choose Genre</option>
-  <option value="Action">Action</option>
-  <option value="Drama">Drama</option>
-  <option value="Comedy">Comedy</option>
-  <option value="Romance">Romance</option>
-  <option value="Thriller">Thriller</option>
-  <option value="Horror">Horror</option>
-  <option value="Sci-Fi">Sci-Fi</option>
-  <option value="Documentary">Documentary</option>
-</select>
+        <option value="">Choose Genre</option>
+        <option value="Action">Action</option>
+        <option value="Drama">Drama</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Romance">Romance</option>
+        <option value="Thriller">Thriller</option>
+        <option value="Horror">Horror</option>
+        <option value="Sci-Fi">Sci-Fi</option>
+        <option value="Documentary">Documentary</option>
+      </select>
 
-      <textarea id="notes" placeholder="Why you loved it? (optional)"></textarea>
+      <div class="rating" id="rating">
+        <label>Rate it:</label>
+        <span class="star" data-value="1">&#10084;</span>
+        <span class="star" data-value="2">&#10084;</span>
+        <span class="star" data-value="3">&#10084;</span>
+        <span class="star" data-value="4">&#10084;</span>
+        <span class="star" data-value="5">&#10084;</span>
+      </div>
+
       <button type="submit">Add Movie</button>
     </form>
-
-    <input type="text" id="search" placeholder="🔍 Search movie posters" />
 
     <div id="movies" class="movie-grid"></div>
   </div>
